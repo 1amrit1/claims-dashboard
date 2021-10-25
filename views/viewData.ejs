@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta
+        charset="UTF-8">
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <link
+        rel="stylesheet"
+        href="css/booksPage.css">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>All Books
+        📚</title>
+</head>
+<script
+    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+    crossorigin="anonymous"></script>
+<style>
+    * {
+        text-align: center;
+        /* margin: 0%;
+        padding: 0%; */
+        border: 1rem;
+        border: solid;
+        border-color: rgb(104, 221, 250);
+        background-color: black;
+        color: white;
+        letter-spacing: 0.1rem;
+    }
+
+    #tableHeadingRow th {
+        background-color: aliceblue;
+        color: black;
+        font-weight: bolder;
+        font-size: large;
+    }
+</style>
+
+<body>
+    <h1>Claims Data
+    </h1>
+    <div
+        class="bookCard">
+        <table
+            style="width:100%">
+            <tr
+                id="tableHeadingRow">
+
+                <%for(var
+                    i=0;
+                    i<data[0].length;i++)
+                    {%>
+                    <th>
+                        <%=data[0][i]%>
+                    </th>
+                    <%}%>
+            </tr>
+
+
+            <%for(var
+                i=1;
+                i<data.length;i++)
+                {%>
+                <tr>
+                    <%for(var
+                        j=0;
+                        j<data[i].length;j++)
+                        {%>
+                        <td>
+                            <%=data[i][j]%>
+                        </td>
+                        <%}%>
+                </tr>
+                <%}%>
+
+        </table>
+
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta
+        charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        #formCard {
+            margin-top: 15vh;
+            margin-left: 15vw;
+            background-color: aquamarine;
+            padding: 10%;
+            width: 50vw;
+            border-radius: 30%;
+            /* font-size: 5rem; */
+        }
+
+        #submitBtn {
+            padding: 2rem;
+            border-radius: 10%;
+            font-size: 2rem;
+        }
+
+        #submitBtn:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="input-field col s6"
+        id="formCard">
+        <form
+            name="myForm"
+            action="/sendFile"
+            method="post"
+            enctype="multipart/form-data">
+            <input
+                id="fileBtn"
+                name="file"
+                type="file"
+                class="validate">
+            <br><br><br><br><br>
+            <input
+                type="submit"
+                id="submitBtn">
+        </form>
+    </div>
+</body>
+
+</html>
